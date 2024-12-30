@@ -1,6 +1,9 @@
 # TodoList 🧑🏼‍💻
 
-![TodolistInitial](https://github.com/user-attachments/assets/c13e1a47-4571-4c40-8a22-d1833b7337d9)
+![Update_Todolistts](https://github.com/user-attachments/assets/f45db69e-99c9-4e12-832e-b10313eda589)
+![Update_Todolistts2](https://github.com/user-attachments/assets/53ece72b-7f48-41ec-bfc8-bf0d6fe95ee7)
+
+
 
 
 
