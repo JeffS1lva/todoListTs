@@ -1,0 +1,167 @@
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 46rem;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  gap: 0.6rem;
+  max-width: 46rem;
+  
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.form input {
+  width: 100%;
+  bottom: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+  border-radius: 6px;
+  color: var(--gray-300);
+  background: var(--gray-500);
+  font-family: "Inter", sans-serif;
+  border: 1px solid var(--gray-700);
+}
+
+.form input:focus {
+  outline: 1px solid var(--purple-dark);
+}
+
+.form button {
+  gap: 0.3rem;
+  bottom: 2rem;
+  padding: 1rem;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  border-radius: 8px;
+  align-items: center;
+  color: var(--gray-100);
+  background-color: var(--blue-dark);
+}
+
+.form button:hover {
+  background: var(--blue);
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskContainer p {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.taskContainer span {
+  font-weight: bold;
+  color: var(--purple);
+}
+
+.taskContainer b {
+  background: var(--gray-400);
+  color: var(--gray-200);
+  border-radius: 10rem;
+  padding: 2px 8px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.emptyArea {
+  border: 0.1rem solid var(--gray-400);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin-top: 1.5rem;
+  padding: 4rem 1.5rem;
+  justify-content: center;
+}
+
+.voidTask {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.voidTask span {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--gray-300);
+}
+
+.voidTask p {
+  font-weight: 300;
+  color: var(--gray-300);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%; /* Ajusta o tamanho da fonte */
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .form {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .form input, .form button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem; /* Menor tamanho de fonte */
+  }
+
+  .taskContainer {
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .taskContainer p, .taskContainer span, .taskContainer b {
+    font-size: 1rem; 
+  }
+
+  .emptyArea {
+    padding: 2rem 1rem; /* Menos padding */
+  }
+
+  .voidTask {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+
+  .voidTask span {
+    font-size: 1rem;
+  }
+
+  .voidTask p {
+    font-size: 0.9rem;
+  }
+}

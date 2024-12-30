@@ -1,0 +1,36 @@
+
+
+.task {
+  display: flex;
+  align-items: center;
+  padding:1.1rem ;
+  gap: 10px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  background-color: var(--gray-400) ;
+}
+
+.task p {
+  font-weight: 300;
+  color: var(--gray-100);
+}
+
+.task button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  color: var(--gray-300);
+}
+
+.task button:hover {
+  color:var(--danger);
+  border: none;
+}
+
+@media (max-width: 768px) {
+  /* .task {
+    padding:  1rem;
+  } */
+}

@@ -1,0 +1,6 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  background: var(--gray-700);
+  padding: 5rem ;
+}
