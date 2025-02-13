@@ -3,6 +3,8 @@ import { PlusCircle } from "phosphor-react";
 import { ClipboardText } from "phosphor-react";
 import { Task } from "./Task";
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Post() {
   const [task, setPostTask] = useState<string[]>([]);
@@ -15,6 +17,17 @@ export function Post() {
     setPostTask([...task, newTask]);
     setNewTask("");
     setTaskCount(taskCount + 1);
+    toast.success("Tarefa criada com sucesso!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    })
   }
 
   function handleOnChange(event: ChangeEvent <HTMLInputElement>) {
@@ -43,8 +56,10 @@ export function Post() {
     }
   }
 
+
   return (
     <div className={styles.container}>
+      <ToastContainer/>
       <form onSubmit={handleTask} className={styles.form} action="">
         <input
           type="text"
@@ -57,6 +72,7 @@ export function Post() {
           <button type="submit">
             Criar <PlusCircle size={26} />
           </button>
+          
         </div>
       </form>
       <div className={styles.taskContainer}>
