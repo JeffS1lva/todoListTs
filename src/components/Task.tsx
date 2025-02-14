@@ -1,7 +1,6 @@
 import styles from "./Task.module.css";
 import { Trash } from "phosphor-react";
 import { Checkbox } from "./Checkbox";
-import { Bounce, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 interface TaskProps {
