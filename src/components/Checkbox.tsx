@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Checkbox.module.css";
 
 interface CheckboxProps {
@@ -10,13 +10,17 @@ interface CheckboxProps {
 export function Checkbox({ label, checked = false, onTaskUpdate }: CheckboxProps) {
   const [isChecked, setIsChecked] = useState(checked);
 
+  // Sincroniza o estado do checkbox com o valor de `checked` prop
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
+
   function handleToggle() {
     const newCheckedStatus = !isChecked;
     setIsChecked(newCheckedStatus);
 
-    if (onTaskUpdate) {
-      onTaskUpdate(newCheckedStatus);
-    }
+    // Chama o callback para atualizar o estado no componente pai
+    onTaskUpdate(newCheckedStatus);
   }
 
   return (
@@ -25,9 +29,7 @@ export function Checkbox({ label, checked = false, onTaskUpdate }: CheckboxProps
         {isChecked && <span className={styles.checkmark}>✔</span>}
       </div>
       {label && (
-        <span
-          className={`${styles.label} ${isChecked ? styles.strikethrough : ""}`}
-        >
+        <span className={`${styles.label} ${isChecked ? styles.strikethrough : ""}`}>
           {label}
         </span>
       )}
