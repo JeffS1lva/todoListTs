@@ -55,6 +55,7 @@
 
 .form button:hover {
   background: var(--blue);
+  transition: linear 1s;
 }
 
 .taskContainer {

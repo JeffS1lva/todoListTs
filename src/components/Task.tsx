@@ -1,6 +1,8 @@
 import styles from "./Task.module.css";
 import { Trash } from "phosphor-react";
 import { Checkbox } from "./Checkbox";
+import { Bounce, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 interface TaskProps {
   content: string;
@@ -13,6 +15,7 @@ export function Task({ content, taskDelete, onTaskUpdate, isChecked }: TaskProps
 
   function handleDeleteTask() {
     taskDelete(content);
+    
   }
 
   function handleTaskUpdate() {
@@ -27,7 +30,7 @@ export function Task({ content, taskDelete, onTaskUpdate, isChecked }: TaskProps
         checked={isChecked}  // Atualiza o estado do checkbox com isChecked
       />
       
-      <button onClick={handleDeleteTask}>
+      <button onClick={handleDeleteTask} >
         <Trash size={20} />
       </button>
     </div>
